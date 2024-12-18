@@ -1,8 +1,5 @@
 import readlineSync from 'readline-sync';
 import { colors } from './src/util/Colors';
-//import { ProdutosController } from './controller/produtosController';
-//import { Medicamentos } from './src/model/medicamentos';
-//import { Consmeticos } from './src/model/cosmeticos';
 
 export function main(){
 
