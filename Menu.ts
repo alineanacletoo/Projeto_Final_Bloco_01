@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import { colors } from './src/util/Colors';
 import { Tecidos } from './src/model/Tecidos';
 import { Joia } from './src/model/Joia'; 
+import { ProdutosController } from './controller/ProdutosController';
 
 export function main(){
 
@@ -15,7 +16,7 @@ export function main(){
 
     let continuar = true;
     while(continuar){
-        console.log(colors.bg.black, colors.fg.magenta)
+        console.log(colors.bg.black, colors.fg.yellow)
         console.log("=====================================================");
         console.log("                                                     ");
         console.log("                    LoopShop                         ");
@@ -62,13 +63,13 @@ export function main(){
                 switch (tipo) {
                     case 1:
                         // Criar Roupas
-                        console.log("Digite o tipo de roupa: ");
+                        console.log("Digite o tipo de tecido: ");
                         tecido = readlineSync.question('');
                         produto.cadastrar(new Tecidos(produto.gerarId(), nome, tipo, valor, estoque, tecido));
                         break;
                     case 2:
                         // Criar Acessorios 
-                        console.log("Digite o tipo de Roupa: ");
+                        console.log("Digite o tipo de joia: ");
                         joia = readlineSync.question('');
                         produto.cadastrar(new Joia(produto.gerarId(), nome, tipo, valor, estoque, joia));
 
@@ -121,13 +122,13 @@ export function main(){
                     switch (tipo) {
                         case 1:
                             // Atualizar Roupas
-                            console.log("Digite o novo seguimento do medicamento: ");
+                            console.log("Digite o tipo de tecido: ");
                             tecido = readlineSync.question('');
                             produto.atualizar(new Tecidos(id, nome, tipo, valor, estoque, tecido));
                             break;
                         case 2:
                             // Atualizar Acessorios
-                            console.log("Digite o novo seguimento do cosmetico: ");
+                            console.log("Digite o tipo de joia: ");
                             joia = readlineSync.question('');
                             produto.atualizar(new Joia(id, nome, tipo, valor, estoque, joia));
                             break;

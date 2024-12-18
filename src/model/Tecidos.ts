@@ -20,7 +20,7 @@ export class Tecidos extends Produtos{
 
     public visualizar(){
         super.visualizar();
-        console.log(`  Seguimento do cosmetico: ${this._roupas}`);
+        console.log(`tipo do tecido: ${this._roupas}`);
     }
 
 

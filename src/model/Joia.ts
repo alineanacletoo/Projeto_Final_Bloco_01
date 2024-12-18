@@ -20,6 +20,6 @@ export class Joia extends Produtos{
 
     public visualizar(){
         super.visualizar();
-        console.log(`  Seguimento do medicamento: ${this._acessorio}`);
+        console.log(`  tipo de joia: ${this._acessorio}`);
     }
 }
