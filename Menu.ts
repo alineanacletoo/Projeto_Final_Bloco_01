@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 import { colors } from './src/util/Colors';
+import { Tecidos } from './src/model/Tecidos';
+import { Joia } from './src/model/Joia'; 
 
 export function main(){
 
@@ -62,13 +64,13 @@ export function main(){
                         // Criar Roupas
                         console.log("Digite o tipo de roupa: ");
                         tecido = readlineSync.question('');
-                        produto.cadastrar(new Roupas(produto.gerarId(), nome, tipo, valor, estoque, tecido));
+                        produto.cadastrar(new Tecidos(produto.gerarId(), nome, tipo, valor, estoque, tecido));
                         break;
                     case 2:
                         // Criar Acessorios 
                         console.log("Digite o tipo de Roupa: ");
                         joia = readlineSync.question('');
-                        produto.cadastrar(new Acessorios(produto.gerarId(), nome, tipo, valor, estoque, joia));
+                        produto.cadastrar(new Joia(produto.gerarId(), nome, tipo, valor, estoque, joia));
 
                         break;
                     default:
@@ -121,13 +123,13 @@ export function main(){
                             // Atualizar Roupas
                             console.log("Digite o novo seguimento do medicamento: ");
                             tecido = readlineSync.question('');
-                            produto.atualizar(new Medicamentos(id, nome, tipo, valor, estoque, tecido));
+                            produto.atualizar(new Tecidos(id, nome, tipo, valor, estoque, tecido));
                             break;
                         case 2:
                             // Atualizar Acessorios
                             console.log("Digite o novo seguimento do cosmetico: ");
                             joia = readlineSync.question('');
-                            produto.atualizar(new Consmeticos(id, nome, tipo, valor, estoque, joia));
+                            produto.atualizar(new Joia(id, nome, tipo, valor, estoque, joia));
                             break;
                     } 
                 }else {
