@@ -10,11 +10,11 @@ export class Joia extends Produtos{
         this._acessorio = acessorio;
 	}
 
-	public get generico(): string {
+	public get acessorio(): string {
 		return this._acessorio;
 	}
 
-	public set generico(value: string) {
+	public set acessorio(value: string) {
 		this._acessorio = value;
 	}
 
