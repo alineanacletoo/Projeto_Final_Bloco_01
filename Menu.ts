@@ -153,7 +153,7 @@ export function main(){
                 break;
 
             case 0:
-                console.log("\nSaindo do sistema...Volte sempre!");
+                console.log("\nVolte sempre!");
                 console.log("====================================================");
                 sobre();
 
